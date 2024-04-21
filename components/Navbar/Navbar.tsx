@@ -1,35 +1,26 @@
-"use client"
-import { Fragment, ReactElement } from 'react';
-import { Disclosure, Menu, Transition } from '@headlessui/react';
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
-import { usePathname } from 'next/navigation';
-
-
-type NavigationItem = {
-  name: string;
-  href: string;
-  current: boolean;
-};
-
-const navigation: NavigationItem[] = [
-  { name: 'Home', href: '#', current: true },
-  { name: 'Pro', href: '#', current: false },
-  { name: 'Admin', href: '#', current: false },
-  { name: 'User', href: '#', current: false },
-];
+"use client";
+import { Fragment, ReactElement, useState } from "react";
+import { Disclosure, Menu, Transition } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 function classNames(...classes: (string | boolean)[]): string {
-  return classes.filter(Boolean).join(' ');
+  return classes.filter(Boolean).join(" ");
 }
 
 export default function Navbar(): ReactElement {
-    const pathName = usePathname()
-    const isAdminPage = pathName?.includes("/admin");
-    const isProPage = pathName?.includes("/pro");
-    const isUserPge = pathName?.includes("/user");
-      return (
+  const [activeTab, setActiveTab] = useState(1);
+
+  const pathName = usePathname();
+
+  const isAdminPage = pathName?.includes("/admin");
+  const isProPage = pathName?.includes("/pro");
+  const isUserPage = pathName?.includes("/user");
+
+  return (
     <Disclosure as="nav" className="bg-gray-700 w-full fixed top-0 ">
-      {({ open }):  ReactElement => (
+      {({ open }): ReactElement => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
             <div className="relative flex h-16 items-center justify-between">
@@ -54,33 +45,71 @@ export default function Navbar(): ReactElement {
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
-                    {navigation.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className={classNames(
-                          item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                          'rounded-md px-3 py-2 text-sm font-medium'
-                        )}
-                        aria-current={item.current ? 'page' : undefined}
+                    {(!isUserPage || !isProPage || !isAdminPage) && (
+                      <Link
+                        onClick={() => setActiveTab(1)}
+                        key={1}
+                        href={"/"}
+                        className={` "rounded-md px-3 py-2 text-sm font-medium" ${
+                          activeTab === 1
+                            ? "bg-gray-900 text-white"
+                            : "text-gray-300 hover:bg-gray-700 hover:text-white"
+                        }`}
+                        aria-current={activeTab === 1 ? "page" : undefined}
                       >
-                        {item.name}
-                      </a>
-                    ))}
+                        Home
+                      </Link>
+                    )}
+
+                    {!isUserPage && (
+                      <Link
+                        onClick={() => setActiveTab(2)}
+                        key={2}
+                        href={"/user"}
+                        className={` "rounded-md px-3 py-2 text-sm font-medium" ${
+                          activeTab === 2
+                            ? "bg-gray-900 text-white"
+                            : "text-gray-300 hover:bg-gray-700 hover:text-white"
+                        }`}
+                        aria-current={activeTab === 1 ? "page" : undefined}
+                      >
+                        Go To User 
+                      </Link>
+                    )}
+                    {!isProPage && (
+                      <Link
+                        onClick={() => setActiveTab(3)}
+                        key={3}
+                        href={"/pro"}
+                        className={` "rounded-md px-3 py-2 text-sm font-medium" ${
+                          activeTab === 3
+                            ? "bg-gray-900 text-white"
+                            : "text-gray-300 hover:bg-gray-700 hover:text-white"
+                        }`}
+                        aria-current={activeTab === 1 ? "page" : undefined}
+                      >
+                         Go To Pro
+                      </Link>
+                    )}
+                    {!isAdminPage && (
+                      <Link
+                        onClick={() => setActiveTab(4)}
+                        key={4}
+                        href={"/admin"}
+                        className={` "rounded-md px-3 py-2 text-sm font-medium" ${
+                          activeTab === 4
+                            ? "bg-gray-900 text-white"
+                            : "text-gray-300 hover:bg-gray-700 hover:text-white"
+                        }`}
+                        aria-current={activeTab === 4 ? "page" : undefined}
+                      >
+                        Go To Admin
+                      </Link>
+                    )}
                   </div>
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <button
-                  type="button"
-                  className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-                >
-                  <span className="absolute -inset-1.5" />
-                  <span className="sr-only">View notifications</span>
-                  <BellIcon className="h-6 w-6" aria-hidden="true" />
-                </button>
-
-                
                 <Menu as="div" className="relative ml-3">
                   <div>
                     <Menu.Button className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
@@ -107,7 +136,10 @@ export default function Navbar(): ReactElement {
                         {({ active }) => (
                           <a
                             href="#"
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                            className={classNames(
+                              active ? "bg-gray-100" : "",
+                              "block px-4 py-2 text-sm text-gray-700"
+                            )}
                           >
                             Your Profile
                           </a>
@@ -117,7 +149,10 @@ export default function Navbar(): ReactElement {
                         {({ active }) => (
                           <a
                             href="#"
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                            className={classNames(
+                              active ? "bg-gray-100" : "",
+                              "block px-4 py-2 text-sm text-gray-700"
+                            )}
                           >
                             Settings
                           </a>
@@ -127,7 +162,10 @@ export default function Navbar(): ReactElement {
                         {({ active }) => (
                           <a
                             href="#"
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                            className={classNames(
+                              active ? "bg-gray-100" : "",
+                              "block px-4 py-2 text-sm text-gray-700"
+                            )}
                           >
                             Sign out
                           </a>
@@ -142,20 +180,69 @@ export default function Navbar(): ReactElement {
 
           <Disclosure.Panel className="sm:hidden">
             <div className="space-y-1 px-2 pb-3 pt-2">
-              {navigation.map((item) => (
+              <Disclosure.Button
+                as="a"
+                onClick={() => setActiveTab(1)}
+                key={1}
+                href={"/"}
+                className={` "rounded-md px-3 py-2 text-sm font-medium" ${
+                  activeTab === 1
+                    ? "bg-gray-900 text-white"
+                    : "text-gray-300 hover:bg-gray-700 hover:text-white"
+                }`}
+                aria-current={activeTab === 1 ? "page" : undefined}
+              >
+                Home
+              </Disclosure.Button>
+
+              {isUserPage && (
                 <Disclosure.Button
-                  key={item.name}
                   as="a"
-                  href={item.href}
-                  className={classNames(
-                    item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                    'block rounded-md px-3 py-2 text-base font-medium'
-                  )}
-                  aria-current={item.current ? 'page' : undefined}
+                  onClick={() => setActiveTab(2)}
+                  key={2}
+                  href={"/user"}
+                  className={` "rounded-md px-3 py-2 text-sm font-medium" ${
+                    activeTab === 2
+                      ? "bg-gray-900 text-white"
+                      : "text-gray-300 hover:bg-gray-700 hover:text-white"
+                  }`}
+                  aria-current={activeTab === 1 ? "page" : undefined}
                 >
-                  {item.name}
+                  User
                 </Disclosure.Button>
-              ))}
+              )}
+              {isProPage && (
+                <Disclosure.Button
+                  as="a"
+                  onClick={() => setActiveTab(3)}
+                  key={3}
+                  href={"/pro"}
+                  className={` "rounded-md px-3 py-2 text-sm font-medium" ${
+                    activeTab === 3
+                      ? "bg-gray-900 text-white"
+                      : "text-gray-300 hover:bg-gray-700 hover:text-white"
+                  }`}
+                  aria-current={activeTab === 1 ? "page" : undefined}
+                >
+                  Pro
+                </Disclosure.Button>
+              )}
+              {isAdminPage && (
+                <Disclosure.Button
+                  as="a"
+                  onClick={() => setActiveTab(4)}
+                  key={4}
+                  href={"/admin"}
+                  className={` "rounded-md px-3 py-2 text-sm font-medium" ${
+                    activeTab === 4
+                      ? "bg-gray-900 text-white"
+                      : "text-gray-300 hover:bg-gray-700 hover:text-white"
+                  }`}
+                  aria-current={activeTab === 4 ? "page" : undefined}
+                >
+                  Admin
+                </Disclosure.Button>
+              )}
             </div>
           </Disclosure.Panel>
         </>
