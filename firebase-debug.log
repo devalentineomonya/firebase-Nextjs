@@ -1,0 +1,279 @@
+[debug] [2024-04-20T22:13:32.248Z] ----------------------------------------------------------------------
+[debug] [2024-04-20T22:13:32.251Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2024-04-20T22:13:32.252Z] CLI Version:   13.7.3
+[debug] [2024-04-20T22:13:32.252Z] Platform:      win32
+[debug] [2024-04-20T22:13:32.253Z] Node Version:  v21.6.0
+[debug] [2024-04-20T22:13:32.253Z] Time:          Sun Apr 21 2024 01:13:32 GMT+0300 (East Africa Time)
+[debug] [2024-04-20T22:13:32.253Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-04-20T22:13:32.466Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-04-20T22:13:32.466Z] > authorizing via signed-in user (testingdevalemail@gmail.com)
+[debug] [2024-04-20T22:13:33.110Z] java version "21.0.1" 2023-10-17 LTS
+
+[debug] [2024-04-20T22:13:33.112Z] Java(TM) SE Runtime Environment (build 21.0.1+12-LTS-29)
+Java HotSpot(TM) 64-Bit Server VM (build 21.0.1+12-LTS-29, mixed mode, sharing)
+
+[debug] [2024-04-20T22:13:33.178Z] Parsed Java major version: 21
+[info] i  emulators: Starting emulators: auth, functions, firestore {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: auth, functions, firestore"}}
+[debug] [2024-04-20T22:13:33.203Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-04-20T22:13:33.204Z] [auth] Authentication Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-04-20T22:13:33.204Z] [firestore] Firestore Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-04-20T22:13:33.204Z] [firestore.websocket] websocket server for firestore only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-04-20T22:13:33.205Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2024-04-20T22:13:33.215Z] [hub] writing locator at C:\Users\user\AppData\Local\Temp\hub-learningfirebasewithmiguel.json
+[debug] [2024-04-20T22:13:33.233Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-04-20T22:13:33.233Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-04-20T22:13:33.233Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: database, hosting, pubsub, storage {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mdatabase, hosting, pubsub, storage\u001b[22m"}}
+[debug] [2024-04-20T22:13:33.248Z] defaultcredentials: writing to file C:\Users\user\AppData\Roaming\firebase\testingdevalemail_gmail_com_application_default_credentials.json
+[debug] [2024-04-20T22:13:33.251Z] Setting GAC to C:\Users\user\AppData\Roaming\firebase\testingdevalemail_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\user\\AppData\\Roaming\\firebase\\testingdevalemail_gmail_com_application_default_credentials.json"}}
+[debug] [2024-04-20T22:13:33.254Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/learningfirebasewithmiguel/adminSdkConfig [none]
+[debug] [2024-04-20T22:13:34.045Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/learningfirebasewithmiguel/adminSdkConfig 200
+[debug] [2024-04-20T22:13:34.045Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/learningfirebasewithmiguel/adminSdkConfig {"projectId":"learningfirebasewithmiguel","storageBucket":"learningfirebasewithmiguel.appspot.com"}
+[debug] [2024-04-20T22:13:34.070Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-04-20T22:13:34.071Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
+[debug] [2024-04-20T22:13:34.071Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","C:\\Users\\user\\.cache\\firebase\\emulators\\cloud-firestore-emulator-v1.19.4.jar","--host","127.0.0.1","--port",8080,"--websocket_port",9150,"--project_id","learningfirebasewithmiguel","--rules","C:\\Users\\user\\OneDrive\\Desktop\\Learning Coding\\learningFirebase\\firebaseauth\\firestore.rules","--single_project_mode",true,"--functions_emulator","127.0.0.1:5001"],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"C:\\\\Users\\\\user\\\\.cache\\\\firebase\\\\emulators\\\\cloud-firestore-emulator-v1.19.4.jar\",\"--host\",\"127.0.0.1\",\"--port\",8080,\"--websocket_port\",9150,\"--project_id\",\"learningfirebasewithmiguel\",\"--rules\",\"C:\\\\Users\\\\user\\\\OneDrive\\\\Desktop\\\\Learning Coding\\\\learningFirebase\\\\firebaseauth\\\\firestore.rules\",\"--single_project_mode\",true,\"--functions_emulator\",\"127.0.0.1:5001\"],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false}"}}
+[info] i  firestore: Firestore Emulator logging to firestore-debug.log {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator logging to \u001b[1mfirestore-debug.log\u001b[22m"}}
+[info] +  firestore: Firestore Emulator UI websocket is running on 9150. {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator UI websocket is running on 9150."}}
+[info] i  ui: downloading ui-v1.11.8.zip... {"metadata":{"emulator":{"name":"ui"},"message":"downloading ui-v1.11.8.zip..."}}
+[debug] [2024-04-20T22:13:49.644Z] >>> [apiv2][query] GET https://storage.googleapis.com/firebase-preview-drop/emulator/ui-v1.11.8.zip 
+[debug] [2024-04-20T22:13:58.750Z] <<< [apiv2][status] GET https://storage.googleapis.com/firebase-preview-drop/emulator/ui-v1.11.8.zip 200
+[debug] [2024-04-20T22:13:58.751Z] <<< [apiv2][body] GET https://storage.googleapis.com/firebase-preview-drop/emulator/ui-v1.11.8.zip [stream]
+[debug] [2024-04-20T22:14:09.642Z] Data is 3523907
+[debug] [2024-04-20T22:14:09.643Z] [unzip] Entry: client/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2024-04-20T22:14:09.644Z] [unzip] Processing entry: client\
+[debug] [2024-04-20T22:14:09.644Z] [unzip] mkdir: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client\
+[debug] [2024-04-20T22:14:09.645Z] [unzip] Entry: client/favicon.ico (compressed_size=2497 bytes, uncompressed_size=7406 bytes)
+[debug] [2024-04-20T22:14:09.645Z] [unzip] Processing entry: client\favicon.ico
+[debug] [2024-04-20T22:14:09.645Z] [unzip] else mkdir: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client
+[debug] [2024-04-20T22:14:09.645Z] [unzip] deflating: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client\favicon.ico
+[debug] [2024-04-20T22:14:09.651Z] [unzip] Entry: client/apple-touch-icon.png (compressed_size=7231 bytes, uncompressed_size=7367 bytes)
+[debug] [2024-04-20T22:14:09.651Z] [unzip] Processing entry: client\apple-touch-icon.png
+[debug] [2024-04-20T22:14:09.652Z] [unzip] else mkdir: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client
+[debug] [2024-04-20T22:14:09.652Z] [unzip] deflating: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client\apple-touch-icon.png
+[debug] [2024-04-20T22:14:09.660Z] [unzip] Entry: client/android-chrome-512x512.png (compressed_size=16987 bytes, uncompressed_size=18186 bytes)
+[debug] [2024-04-20T22:14:09.661Z] [unzip] Processing entry: client\android-chrome-512x512.png
+[debug] [2024-04-20T22:14:09.661Z] [unzip] else mkdir: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client
+[debug] [2024-04-20T22:14:09.661Z] [unzip] deflating: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client\android-chrome-512x512.png
+[debug] [2024-04-20T22:14:09.665Z] [unzip] Entry: client/assets/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2024-04-20T22:14:09.665Z] [unzip] Processing entry: client\assets\
+[debug] [2024-04-20T22:14:09.665Z] [unzip] mkdir: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client\assets\
+[debug] [2024-04-20T22:14:09.666Z] [unzip] Entry: client/assets/extensions/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2024-04-20T22:14:09.666Z] [unzip] Processing entry: client\assets\extensions\
+[debug] [2024-04-20T22:14:09.666Z] [unzip] mkdir: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client\assets\extensions\
+[debug] [2024-04-20T22:14:09.667Z] [unzip] Entry: client/assets/extensions/default-extension.png (compressed_size=1646 bytes, uncompressed_size=1657 bytes)
+[debug] [2024-04-20T22:14:09.667Z] [unzip] Processing entry: client\assets\extensions\default-extension.png
+[debug] [2024-04-20T22:14:09.667Z] [unzip] else mkdir: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client\assets\extensions
+[debug] [2024-04-20T22:14:09.668Z] [unzip] deflating: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client\assets\extensions\default-extension.png
+[debug] [2024-04-20T22:14:09.669Z] [unzip] Entry: client/assets/index-Z4-ilXvq.js.map (compressed_size=2229704 bytes, uncompressed_size=9599487 bytes)
+[debug] [2024-04-20T22:14:09.670Z] [unzip] Processing entry: client\assets\index-Z4-ilXvq.js.map
+[debug] [2024-04-20T22:14:09.670Z] [unzip] else mkdir: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client\assets
+[debug] [2024-04-20T22:14:09.672Z] [unzip] deflating: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client\assets\index-Z4-ilXvq.js.map
+[debug] [2024-04-20T22:14:09.786Z] [unzip] Entry: client/assets/provider-icons/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2024-04-20T22:14:09.786Z] [unzip] Processing entry: client\assets\provider-icons\
+[debug] [2024-04-20T22:14:09.786Z] [unzip] mkdir: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client\assets\provider-icons\
+[debug] [2024-04-20T22:14:09.787Z] [unzip] Entry: client/assets/provider-icons/auth_service_oidc.svg (compressed_size=414 bytes, uncompressed_size=858 bytes)
+[debug] [2024-04-20T22:14:09.787Z] [unzip] Processing entry: client\assets\provider-icons\auth_service_oidc.svg
+[debug] [2024-04-20T22:14:09.787Z] [unzip] else mkdir: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client\assets\provider-icons
+[debug] [2024-04-20T22:14:09.788Z] [unzip] deflating: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client\assets\provider-icons\auth_service_oidc.svg
+[debug] [2024-04-20T22:14:09.790Z] [unzip] Entry: client/assets/provider-icons/auth_service_yahoo.svg (compressed_size=577 bytes, uncompressed_size=1182 bytes)
+[debug] [2024-04-20T22:14:09.790Z] [unzip] Processing entry: client\assets\provider-icons\auth_service_yahoo.svg
+[debug] [2024-04-20T22:14:09.790Z] [unzip] else mkdir: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client\assets\provider-icons
+[debug] [2024-04-20T22:14:09.791Z] [unzip] deflating: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client\assets\provider-icons\auth_service_yahoo.svg
+[debug] [2024-04-20T22:14:09.792Z] [unzip] Entry: client/assets/provider-icons/auth_service_phone.svg (compressed_size=261 bytes, uncompressed_size=414 bytes)
+[debug] [2024-04-20T22:14:09.792Z] [unzip] Processing entry: client\assets\provider-icons\auth_service_phone.svg
+[debug] [2024-04-20T22:14:09.792Z] [unzip] else mkdir: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client\assets\provider-icons
+[debug] [2024-04-20T22:14:09.793Z] [unzip] deflating: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client\assets\provider-icons\auth_service_phone.svg
+[debug] [2024-04-20T22:14:09.795Z] [unzip] Entry: client/assets/provider-icons/auth_service_saml.svg (compressed_size=575 bytes, uncompressed_size=1226 bytes)
+[debug] [2024-04-20T22:14:09.795Z] [unzip] Processing entry: client\assets\provider-icons\auth_service_saml.svg
+[debug] [2024-04-20T22:14:09.795Z] [unzip] else mkdir: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client\assets\provider-icons
+[debug] [2024-04-20T22:14:09.796Z] [unzip] deflating: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client\assets\provider-icons\auth_service_saml.svg
+[debug] [2024-04-20T22:14:09.797Z] [unzip] Entry: client/assets/provider-icons/auth_service_mslive.svg (compressed_size=203 bytes, uncompressed_size=378 bytes)
+[debug] [2024-04-20T22:14:09.798Z] [unzip] Processing entry: client\assets\provider-icons\auth_service_mslive.svg
+[debug] [2024-04-20T22:14:09.798Z] [unzip] else mkdir: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client\assets\provider-icons
+[debug] [2024-04-20T22:14:09.798Z] [unzip] deflating: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client\assets\provider-icons\auth_service_mslive.svg
+[debug] [2024-04-20T22:14:09.799Z] [unzip] Entry: client/assets/provider-icons/auth_service_facebook.svg (compressed_size=289 bytes, uncompressed_size=457 bytes)
+[debug] [2024-04-20T22:14:09.799Z] [unzip] Processing entry: client\assets\provider-icons\auth_service_facebook.svg
+[debug] [2024-04-20T22:14:09.800Z] [unzip] else mkdir: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client\assets\provider-icons
+[debug] [2024-04-20T22:14:09.800Z] [unzip] deflating: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client\assets\provider-icons\auth_service_facebook.svg
+[debug] [2024-04-20T22:14:09.801Z] [unzip] Entry: client/assets/provider-icons/auth_service_play_games.svg (compressed_size=565 bytes, uncompressed_size=1173 bytes)
+[debug] [2024-04-20T22:14:09.801Z] [unzip] Processing entry: client\assets\provider-icons\auth_service_play_games.svg
+[debug] [2024-04-20T22:14:09.801Z] [unzip] else mkdir: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client\assets\provider-icons
+[debug] [2024-04-20T22:14:09.801Z] [unzip] deflating: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client\assets\provider-icons\auth_service_play_games.svg
+[debug] [2024-04-20T22:14:09.803Z] [unzip] Entry: client/assets/provider-icons/auth_service_github.svg (compressed_size=466 bytes, uncompressed_size=838 bytes)
+[debug] [2024-04-20T22:14:09.803Z] [unzip] Processing entry: client\assets\provider-icons\auth_service_github.svg
+[debug] [2024-04-20T22:14:09.803Z] [unzip] else mkdir: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client\assets\provider-icons
+[debug] [2024-04-20T22:14:09.803Z] [unzip] deflating: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client\assets\provider-icons\auth_service_github.svg
+[debug] [2024-04-20T22:14:09.805Z] [unzip] Entry: client/assets/provider-icons/auth_service_apple.svg (compressed_size=230 bytes, uncompressed_size=334 bytes)
+[debug] [2024-04-20T22:14:09.805Z] [unzip] Processing entry: client\assets\provider-icons\auth_service_apple.svg
+[debug] [2024-04-20T22:14:09.805Z] [unzip] else mkdir: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client\assets\provider-icons
+[debug] [2024-04-20T22:14:09.806Z] [unzip] deflating: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client\assets\provider-icons\auth_service_apple.svg
+[debug] [2024-04-20T22:14:09.808Z] [unzip] Entry: client/assets/provider-icons/auth_service_google.svg (compressed_size=409 bytes, uncompressed_size=720 bytes)
+[debug] [2024-04-20T22:14:09.808Z] [unzip] Processing entry: client\assets\provider-icons\auth_service_google.svg
+[debug] [2024-04-20T22:14:09.808Z] [unzip] else mkdir: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client\assets\provider-icons
+[debug] [2024-04-20T22:14:09.809Z] [unzip] deflating: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client\assets\provider-icons\auth_service_google.svg
+[debug] [2024-04-20T22:14:09.810Z] [unzip] Entry: client/assets/provider-icons/auth_service_email.svg (compressed_size=228 bytes, uncompressed_size=326 bytes)
+[debug] [2024-04-20T22:14:09.810Z] [unzip] Processing entry: client\assets\provider-icons\auth_service_email.svg
+[debug] [2024-04-20T22:14:09.810Z] [unzip] else mkdir: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client\assets\provider-icons
+[debug] [2024-04-20T22:14:09.810Z] [unzip] deflating: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client\assets\provider-icons\auth_service_email.svg
+[debug] [2024-04-20T22:14:09.811Z] [unzip] Entry: client/assets/provider-icons/auth_service_twitter.svg (compressed_size=444 bytes, uncompressed_size=751 bytes)
+[debug] [2024-04-20T22:14:09.812Z] [unzip] Processing entry: client\assets\provider-icons\auth_service_twitter.svg
+[debug] [2024-04-20T22:14:09.812Z] [unzip] else mkdir: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client\assets\provider-icons
+[debug] [2024-04-20T22:14:09.812Z] [unzip] deflating: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client\assets\provider-icons\auth_service_twitter.svg
+[debug] [2024-04-20T22:14:09.813Z] [unzip] Entry: client/assets/provider-icons/auth_service_game_center.svg (compressed_size=991 bytes, uncompressed_size=3921 bytes)
+[debug] [2024-04-20T22:14:09.813Z] [unzip] Processing entry: client\assets\provider-icons\auth_service_game_center.svg
+[debug] [2024-04-20T22:14:09.814Z] [unzip] else mkdir: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client\assets\provider-icons
+[debug] [2024-04-20T22:14:09.814Z] [unzip] deflating: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client\assets\provider-icons\auth_service_game_center.svg
+[debug] [2024-04-20T22:14:09.816Z] [unzip] Entry: client/assets/img/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2024-04-20T22:14:09.816Z] [unzip] Processing entry: client\assets\img\
+[debug] [2024-04-20T22:14:09.816Z] [unzip] mkdir: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client\assets\img\
+[debug] [2024-04-20T22:14:09.817Z] [unzip] Entry: client/assets/img/database.png (compressed_size=29449 bytes, uncompressed_size=29988 bytes)
+[debug] [2024-04-20T22:14:09.817Z] [unzip] Processing entry: client\assets\img\database.png
+[debug] [2024-04-20T22:14:09.817Z] [unzip] else mkdir: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client\assets\img
+[debug] [2024-04-20T22:14:09.817Z] [unzip] deflating: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client\assets\img\database.png
+[debug] [2024-04-20T22:14:09.819Z] [unzip] Entry: client/assets/index-Cj5I7867.css (compressed_size=35786 bytes, uncompressed_size=297937 bytes)
+[debug] [2024-04-20T22:14:09.819Z] [unzip] Processing entry: client\assets\index-Cj5I7867.css
+[debug] [2024-04-20T22:14:09.819Z] [unzip] else mkdir: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client\assets
+[debug] [2024-04-20T22:14:09.819Z] [unzip] deflating: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client\assets\index-Cj5I7867.css
+[debug] [2024-04-20T22:14:09.822Z] [unzip] Entry: client/assets/index-Z4-ilXvq.js (compressed_size=563876 bytes, uncompressed_size=2021818 bytes)
+[debug] [2024-04-20T22:14:09.822Z] [unzip] Processing entry: client\assets\index-Z4-ilXvq.js
+[debug] [2024-04-20T22:14:09.822Z] [unzip] else mkdir: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client\assets
+[debug] [2024-04-20T22:14:09.823Z] [unzip] deflating: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client\assets\index-Z4-ilXvq.js
+[debug] [2024-04-20T22:14:09.841Z] [unzip] Entry: client/safari-pinned-tab.svg (compressed_size=838 bytes, uncompressed_size=1504 bytes)
+[debug] [2024-04-20T22:14:09.841Z] [unzip] Processing entry: client\safari-pinned-tab.svg
+[debug] [2024-04-20T22:14:09.841Z] [unzip] else mkdir: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client
+[debug] [2024-04-20T22:14:09.842Z] [unzip] deflating: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client\safari-pinned-tab.svg
+[debug] [2024-04-20T22:14:09.844Z] [unzip] Entry: client/mstile-150x150.png (compressed_size=5406 bytes, uncompressed_size=5723 bytes)
+[debug] [2024-04-20T22:14:09.844Z] [unzip] Processing entry: client\mstile-150x150.png
+[debug] [2024-04-20T22:14:09.844Z] [unzip] else mkdir: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client
+[debug] [2024-04-20T22:14:09.845Z] [unzip] deflating: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client\mstile-150x150.png
+[debug] [2024-04-20T22:14:09.846Z] [unzip] Entry: client/browserconfig.xml (compressed_size=491 bytes, uncompressed_size=822 bytes)
+[debug] [2024-04-20T22:14:09.846Z] [unzip] Processing entry: client\browserconfig.xml
+[debug] [2024-04-20T22:14:09.846Z] [unzip] else mkdir: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client
+[debug] [2024-04-20T22:14:09.846Z] [unzip] deflating: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client\browserconfig.xml
+[debug] [2024-04-20T22:14:09.848Z] [unzip] Entry: client/robots.txt (compressed_size=26 bytes, uncompressed_size=26 bytes)
+[debug] [2024-04-20T22:14:09.848Z] [unzip] Processing entry: client\robots.txt
+[debug] [2024-04-20T22:14:09.848Z] [unzip] else mkdir: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client
+[debug] [2024-04-20T22:14:09.849Z] [unzip] Writing file: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client\robots.txt
+[debug] [2024-04-20T22:14:09.850Z] [unzip] Entry: client/index.html (compressed_size=1365 bytes, uncompressed_size=3071 bytes)
+[debug] [2024-04-20T22:14:09.851Z] [unzip] Processing entry: client\index.html
+[debug] [2024-04-20T22:14:09.851Z] [unzip] else mkdir: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client
+[debug] [2024-04-20T22:14:09.851Z] [unzip] deflating: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client\index.html
+[debug] [2024-04-20T22:14:09.852Z] [unzip] Entry: client/favicon-16x16.png (compressed_size=757 bytes, uncompressed_size=777 bytes)
+[debug] [2024-04-20T22:14:09.852Z] [unzip] Processing entry: client\favicon-16x16.png
+[debug] [2024-04-20T22:14:09.853Z] [unzip] else mkdir: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client
+[debug] [2024-04-20T22:14:09.853Z] [unzip] deflating: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client\favicon-16x16.png
+[debug] [2024-04-20T22:14:09.855Z] [unzip] Entry: client/manifest.json (compressed_size=246 bytes, uncompressed_size=551 bytes)
+[debug] [2024-04-20T22:14:09.855Z] [unzip] Processing entry: client\manifest.json
+[debug] [2024-04-20T22:14:09.855Z] [unzip] else mkdir: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client
+[debug] [2024-04-20T22:14:09.856Z] [unzip] deflating: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client\manifest.json
+[debug] [2024-04-20T22:14:09.858Z] [unzip] Entry: client/favicon-32x32.png (compressed_size=1175 bytes, uncompressed_size=1175 bytes)
+[debug] [2024-04-20T22:14:09.858Z] [unzip] Processing entry: client\favicon-32x32.png
+[debug] [2024-04-20T22:14:09.858Z] [unzip] else mkdir: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client
+[debug] [2024-04-20T22:14:09.859Z] [unzip] Writing file: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client\favicon-32x32.png
+[debug] [2024-04-20T22:14:09.860Z] [unzip] Entry: client/android-chrome-192x192.png (compressed_size=7602 bytes, uncompressed_size=7834 bytes)
+[debug] [2024-04-20T22:14:09.861Z] [unzip] Processing entry: client\android-chrome-192x192.png
+[debug] [2024-04-20T22:14:09.861Z] [unzip] else mkdir: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client
+[debug] [2024-04-20T22:14:09.861Z] [unzip] deflating: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\client\android-chrome-192x192.png
+[debug] [2024-04-20T22:14:09.862Z] [unzip] Entry: server/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2024-04-20T22:14:09.863Z] [unzip] Processing entry: server\
+[debug] [2024-04-20T22:14:09.863Z] [unzip] mkdir: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\server\
+[debug] [2024-04-20T22:14:09.864Z] [unzip] Entry: server/server.mjs (compressed_size=311497 bytes, uncompressed_size=1147307 bytes)
+[debug] [2024-04-20T22:14:09.864Z] [unzip] Processing entry: server\server.mjs
+[debug] [2024-04-20T22:14:09.864Z] [unzip] else mkdir: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\server
+[debug] [2024-04-20T22:14:09.864Z] [unzip] deflating: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\server\server.mjs
+[debug] [2024-04-20T22:14:09.872Z] [unzip] Entry: server/assets/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2024-04-20T22:14:09.872Z] [unzip] Processing entry: server\assets\
+[debug] [2024-04-20T22:14:09.872Z] [unzip] mkdir: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\server\assets\
+[debug] [2024-04-20T22:14:09.873Z] [unzip] Entry: server/assets/multipart-parser-n20ATYm_.mjs.map (compressed_size=4790 bytes, uncompressed_size=17920 bytes)
+[debug] [2024-04-20T22:14:09.874Z] [unzip] Processing entry: server\assets\multipart-parser-n20ATYm_.mjs.map
+[debug] [2024-04-20T22:14:09.874Z] [unzip] else mkdir: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\server\assets
+[debug] [2024-04-20T22:14:09.874Z] [unzip] deflating: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\server\assets\multipart-parser-n20ATYm_.mjs.map
+[debug] [2024-04-20T22:14:09.876Z] [unzip] Entry: server/assets/multipart-parser-n20ATYm_.mjs (compressed_size=2625 bytes, uncompressed_size=10428 bytes)
+[debug] [2024-04-20T22:14:09.876Z] [unzip] Processing entry: server\assets\multipart-parser-n20ATYm_.mjs
+[debug] [2024-04-20T22:14:09.876Z] [unzip] else mkdir: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\server\assets
+[debug] [2024-04-20T22:14:09.877Z] [unzip] deflating: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\server\assets\multipart-parser-n20ATYm_.mjs
+[debug] [2024-04-20T22:14:09.878Z] [unzip] Entry: server/server.mjs.map (compressed_size=286219 bytes, uncompressed_size=1310517 bytes)
+[debug] [2024-04-20T22:14:09.878Z] [unzip] Processing entry: server\server.mjs.map
+[debug] [2024-04-20T22:14:09.878Z] [unzip] else mkdir: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\server
+[debug] [2024-04-20T22:14:09.879Z] [unzip] deflating: C:\Users\user\.cache\firebase\emulators\ui-v1.11.8\server\server.mjs.map
+[debug] [2024-04-20T22:14:09.888Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-04-20T22:14:09.888Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2024-04-20T22:14:09.889Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\user\\.cache\\firebase\\emulators\\ui-v1.11.8\\server\\server.mjs"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\user\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.11.8\\\\server\\\\server.mjs\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2024-04-20T22:14:10.135Z] Web / API server started at 127.0.0.1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
+[debug] [2024-04-20T22:14:10.135Z] Web / API server started at ::1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:4000\n"}}
+[info] i  functions: Watching "C:\Users\user\OneDrive\Desktop\Learning Coding\learningFirebase\firebaseauth\firebase\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\Users\\user\\OneDrive\\Desktop\\Learning Coding\\learningFirebase\\firebaseauth\\firebase\\functions\" for Cloud Functions..."}}
+[debug] [2024-04-20T22:14:10.174Z] Validating nodejs source
+[warn] !  functions: Couldn't find firebase-functions package in your source code. Have you run 'npm install'? 
+[debug] [2024-04-20T22:14:10.180Z] getFunctionsSDKVersion encountered error: Cannot find module 'firebase-functions'
+Require stack:
+- C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\runtimes\node\versioning.js
+- C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\runtimes\node\index.js
+- C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\runtimes\index.js
+- C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\prepare.js
+- C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorShared.js
+- C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulator.js
+- C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\controller.js
+- C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\commandUtils.js
+- C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\database-get.js
+- C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\index.js
+- C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\index.js
+- C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\user\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\deploy\\functions\\runtimes\\node\\versioning.js","C:\\Users\\user\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\deploy\\functions\\runtimes\\node\\index.js","C:\\Users\\user\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\deploy\\functions\\runtimes\\index.js","C:\\Users\\user\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\deploy\\functions\\prepare.js","C:\\Users\\user\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorShared.js","C:\\Users\\user\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulator.js","C:\\Users\\user\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\controller.js","C:\\Users\\user\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\commandUtils.js","C:\\Users\\user\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\commands\\database-get.js","C:\\Users\\user\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\commands\\index.js","C:\\Users\\user\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\index.js","C:\\Users\\user\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\bin\\firebase.js"]}
+[debug] [2024-04-20T22:14:10.182Z] checkFunctionsSDKVersion encountered error: Invalid Version:  {}
+[debug] [2024-04-20T22:14:10.184Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[error] !!  functions: Failed to load function definition from source: FirebaseError: There was an error reading firebase\functions\package.json:
+
+ firebase\functions\lib\index.js does not exist, can't deploy Cloud Functions {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: There was an error reading firebase\\functions\\package.json:\n\n firebase\\functions\\lib\\index.js does not exist, can't deploy Cloud Functions"}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌────────────────┬────────────────┬─────────────────────────────────┐
+│ Emulator       │ Host:Port      │ View in Emulator UI             │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Authentication │ 127.0.0.1:9099 │ http://127.0.0.1:4000/auth      │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Functions      │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Firestore      │ 127.0.0.1:8080 │ http://127.0.0.1:4000/firestore │
+└────────────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500, 9150
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
