@@ -1,6 +1,6 @@
 import { Item, ItemAccess } from "../Api/Items/route" 
 
-export default async function Home() {
+export default async function Pro() {
   let items: Item[] = [];
   const response = await fetch(`${process.env.API_URL}/Api/Items`);
   if (response.ok) {
@@ -11,7 +11,7 @@ export default async function Home() {
   
   return (
     <div>
-      <h1 className="text-white text-xl mb-10">Home Page</h1>
+      <h1 className="text-white text-xl mb-10">Pro Page</h1>
       {items.map((item) => (
         <div
           key={item.id}

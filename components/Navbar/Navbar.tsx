@@ -4,6 +4,7 @@ import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { useAuth } from "./auth-provider";
 
 function classNames(...classes: (string | boolean)[]): string {
   return classes.filter(Boolean).join(" ");
@@ -13,10 +14,33 @@ export default function Navbar(): ReactElement {
   const [activeTab, setActiveTab] = useState(1);
 
   const pathName = usePathname();
+  const auth = useAuth();
 
   const isAdminPage = pathName?.includes("/admin");
   const isProPage = pathName?.includes("/pro");
   const isUserPage = pathName?.includes("/user");
+
+  const loginGoogle = () => {
+    auth
+      ?.loginGoogle()
+      .then(() => {
+        console.log("Logged In");
+      })
+      .catch(() => {
+        console.log("Something went wrong");
+      });
+  };
+
+  const logout = () => {
+    auth
+      ?.logout()
+      .then(() => {
+        console.log("Logged out");
+      })
+      .catch(() => {
+        console.log("Something went wrong");
+      });
+  };
 
   return (
     <Disclosure as="nav" className="bg-gray-700 w-full fixed top-0 ">
@@ -43,6 +67,36 @@ export default function Navbar(): ReactElement {
                     alt="Your Company"
                   />
                 </div>
+                {!auth?.currentUser && (
+                  <Disclosure.Button
+                    onClick={loginGoogle}
+                    key={2}
+                    className={` "rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"`}
+                  >
+                    Login with google
+                  </Disclosure.Button>
+                )}
+                {auth?.currentUser && (
+                  <Disclosure.Button
+                    onClick={logout}
+                    key={2}
+                    className={` "rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"`}
+                  >
+                    Logout
+                  </Disclosure.Button>
+                )}
+
+                {auth?.currentUser && (
+                  <div className="mr-12">
+                    <p className="text-white text-sm font-semibold">
+                      {auth.currentUser.displayName}
+                    </p>
+                    <p className="text-gray-400 text-sm font-semibold">
+                      {auth.currentUser.email}
+                    </p>
+                  </div>
+                )}
+
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
                     {(!isUserPage || !isProPage || !isAdminPage) && (
@@ -73,7 +127,7 @@ export default function Navbar(): ReactElement {
                         }`}
                         aria-current={activeTab === 1 ? "page" : undefined}
                       >
-                        Go To User 
+                        Go To User
                       </Link>
                     )}
                     {!isProPage && (
@@ -88,7 +142,7 @@ export default function Navbar(): ReactElement {
                         }`}
                         aria-current={activeTab === 1 ? "page" : undefined}
                       >
-                         Go To Pro
+                        Go To Pro
                       </Link>
                     )}
                     {!isAdminPage && (
